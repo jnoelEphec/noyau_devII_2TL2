@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+    [BASE]
     Ce fichier représente l'interface de lancement de l'application.
     Cette interface contient 3 zones distinctes :
         - Le header de notre application
@@ -52,6 +53,7 @@ class ChannelsContainer(ScrollView):
 
     def init_channels_list(self):
         """
+            [BASE]
             Initialise la liste des channels disponibles.
             Si l'utilisateur fait partie de channels, les affiche dans le container concerné.
             Sinon, un message s'affiche précisant que l'utilisateur ne fait partie d'aucun channel.
@@ -76,6 +78,7 @@ class ChannelsContainer(ScrollView):
 
     def get_channels_list(self):
         """
+            [BASE]
             Récupère la liste des channels depuis la banque de données.
             :return: list : La liste des channels (objets) auxquels nous appartenons.
         """
