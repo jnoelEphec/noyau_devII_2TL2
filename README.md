@@ -4,7 +4,7 @@
   - Communications en temps réel
   - Enregistrement des données utiles en base de données (heure d'envoi, etc.)
   - Possibilité d'envoyer des documents, images, etc. dans une discussion
-
+  - ...
 
 - Système de discussions groupées
   - Possibilité d'inviter des membres dans un groupe

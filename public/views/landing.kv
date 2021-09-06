@@ -1,31 +1,9 @@
 # -*- coding: utf-8 -*-
 #:import config src.config.config
 
-<ChannelsListButton@Button>
-    size_hint_y: None
-    height: 55
-    font_size: 20
-    background_color: (0, 0, 0, 0)
-
-    canvas.before:
-        Color:
-            rgba: (1,1,1,0.7)
-        Line:
-            width: .5
-            rectangle: self.x, self.y, self.width, self.height
-
-<ChannelsContainer@ScrollView>
-    do_scroll_x: False
-    do_scroll_y: True
-
-    GridLayout:
-        id: channels_content
-        cols: 1
-        spacing: 2
-        size_hint_y: None
 
 <ClickableLink@Button>
-    font_size: 25
+    font_size: 15
     size_hint: (1, None)
     background_color: (0, 0, 0, 0)
 
@@ -40,44 +18,16 @@
             pos: 0, 0
             size: self.width, self.height
 
-    BoxLayout:
-        orientation: "horizontal"
-        size_hint: (1, .2)
-        pos_hint: {'x': 0, 'y': 0.8}
-
-        canvas:
-            Color:
-                rgba: 0, 0, 0, .5
-            Rectangle:
-                pos: self.pos
-                size: self.width, self.height
-
-        FloatLayout:
-            Label:
-                pos_hint: {'center_x': .15, 'center_y': .5}
-                text: "EpheCom"
-                font_size: 40
-
-            BoxLayout:
-                size_hint: (.25, 1)
-                pos_hint: {'x': .75, 'center_y': .5}
-
-                ClickableLink:
-                    text: "Se connecter"
-                    on_press: root.redirect_to_href("login")
-
-                ClickableLink:
-                    text: "S'inscrire"
-                    on_press: root.redirect_to_href("subscribe")
+    Header:
 
     BoxLayout:
-        size_hint: (1, .8)
+        size_hint: (1, .95)
         orientation: "horizontal"
 
         BoxLayout :
             id: channels_box
             orientation: "vertical"
-            size_hint: (.175, 1)
+            size_hint: (.05, 1)
 
             canvas:
                 Color:
@@ -87,65 +37,43 @@
                     size: self.width, self.height
 
         BoxLayout :
-            id: conversation_box
+            id: rooms_box
             orientation: "vertical"
-            size_hint: (.825, 1)
+            size_hint: (.2, 1)
 
             canvas:
                 Color:
-                    rgba: 1, 1, 1, .2
+                    rgba: 0, 0, 0, .30
                 Rectangle:
                     pos: self.pos
                     size: self.width, self.height
 
+            Label:
+                text: "ROOMS"
 
-<EmptyChannels@Label>
-    text: "You don't have any teams"
+        BoxLayout :
+            id: conversation_box
+            orientation: "vertical"
+            size_hint: (.60, 1)
 
+            canvas:
+                Color:
+                    rgba: 0, 0, 0, .15
+                Rectangle:
+                    pos: self.pos
+                    size: self.width, self.height
 
-<ConversationContainer@ScrollView>
-    do_scroll_x: False
-    do_scroll_y: True
-    size_hint: (1, .8)
+        BoxLayout :
+            id: participants_box
+            orientation: "vertical"
+            size_hint: (.15, 1)
 
-    GridLayout:
-        cols: 1
-        spacing: 2
-        size_hint_y: None
+            canvas:
+                Color:
+                    rgba: 0, 0, 0, .3
+                Rectangle:
+                    pos: self.pos
+                    size: self.width, self.height
 
-        Label:
-            text: "JE SUIS l'UTILISATEUR ALIGNÉ A DROITE"
-            halign: "right"
-            text_size: self.size
-            valign: 'middle'
-            padding: 20, 0
-
-        Label:
-            text: "JE SUIS lE CORRESPONDANT ALIGNÉ A GAUCHE"
-            halign: "left"
-            text_size: self.size
-            valign: 'middle'
-            padding: 20, 0
-
-
-<MessageInput@TextInput>
-    size_hint: (.7, 1)
-    font_size: 20
-    padding: 10, 10
-
-
-<SendMessageButton@Button>
-    size_hint: (.1, 1)
-    font_size: 20
-    text: "Envoyer"
-    background_color: config.BG_COLOR_LEVEL_1
-    on_press: print("Il doit se passer quelque chose, à votre tour !")
-
-
-<InputsContainer@BoxLayout>
-    size_hint: (1, .05)
-    orientation: "horizontal"
-
-    MessageInput:
-
-    SendMessageButton:
+            Label:
+                text: "PARTICIPANTS"
