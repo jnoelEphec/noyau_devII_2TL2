@@ -45,6 +45,12 @@ class ScreensManager(ScreenManager):
         elif href == "subscribe":
             from src.views.subscribe import Subscribe
             obj_screen = Subscribe()
+        elif href == "profile":
+            from src.views.profile import Profile
+            obj_screen = Profile()
+        elif href == "help":
+            from src.views.help import Help
+            obj_screen = Help()
 
         return obj_screen
 

@@ -11,6 +11,7 @@
 
 def complete_check(password):
     """
+        [BASE]
         Teste le mot de passe grâce à l'ensemble des critères de validation.
         :param password: Le mot de passe a analyser.
         :return: dict : Un dictionnaire contenant le 'status' de l'exécution et la liste des erreurs si nécessaire.
