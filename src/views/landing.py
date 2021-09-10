@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+    [BASE]
     Ce fichier représente l'interface de lancement de l'application.
     Cette interface contient 3 zones distinctes :
         - Le header de notre application
@@ -19,6 +20,11 @@ from src.config import config
 from src.models.channel import Channel
 from src.models.screens_manager import ScreensManager
 
+Builder.load_file("{0}/header.kv".format(config.VIEWS_DIR))
+Builder.load_file("{0}/participants.kv".format(config.VIEWS_DIR))
+Builder.load_file("{0}/conversation.kv".format(config.VIEWS_DIR))
+Builder.load_file("{0}/rooms.kv".format(config.VIEWS_DIR))
+Builder.load_file("{0}/channels.kv".format(config.VIEWS_DIR))
 Builder.load_file("{0}/landing.kv".format(config.VIEWS_DIR))
 
 
@@ -32,8 +38,14 @@ class EmptyChannels(Label):
 
 class ConversationContainer(ScrollView):
 
-    def __init__(self, channel_id):
+    def __init__(self, room_id):
         super(ConversationContainer, self).__init__()
+        self.room_id = room_id
+
+
+class RoomsContainer(ScrollView):
+    def __init__(self, channel_id):
+        super(RoomsContainer, self).__init__()
         self.channel_id = channel_id
 
 
@@ -52,6 +64,7 @@ class ChannelsContainer(ScrollView):
 
     def init_channels_list(self):
         """
+            [BASE]
             Initialise la liste des channels disponibles.
             Si l'utilisateur fait partie de channels, les affiche dans le container concerné.
             Sinon, un message s'affiche précisant que l'utilisateur ne fait partie d'aucun channel.
@@ -69,13 +82,14 @@ class ChannelsContainer(ScrollView):
         if channels_list:
             for channel in channels_list:
                 channel_label = ChannelsListButton(text=channel.name)
-                channel_label.bind(on_press=lambda a: landing_screen.display_conversation(channel.identifier))
+                channel_label.bind(on_press=lambda a: landing_screen.display_rooms(channel.identifier))
                 self.content.add_widget(channel_label)
         else:
             self.content.add_widget(EmptyChannels())
 
     def get_channels_list(self):
         """
+            [BASE]
             Récupère la liste des channels depuis la banque de données.
             :return: list : La liste des channels (objets) auxquels nous appartenons.
         """
@@ -121,14 +135,31 @@ class LandingScreen(Screen):
         self.name = "landing"
         self.sm = ScreensManager()
         self.conv_box = self.ids.conversation_box
+        self.rooms_box = self.ids.rooms_box
         self.channels_container = None
 
     def redirect_to_href(self, href):
+        """
+            A modifier vers le header !
+        """
         self.sm.redirect(href)
 
-    def display_conversation(self, channel_id):
+    def display_rooms(self, channel_id):
+        """
+            Permet la mise à jour de la liste des rooms après un clic sur le nom d'un channel.
+            :param channel_id: L'identifiant du channel concerné.
+        """
         self.conv_box.clear_widgets()
-        self.conv_box.add_widget(ConversationContainer(channel_id))
+        self.rooms_box.clear_widgets()
+        self.rooms_box.add_widget(RoomsContainer(channel_id))
+
+    def display_conversation(self, room_id):
+        """
+            Permet la mise à jour de la conversation active après un clic sur le nom d'une room.
+            :param room_id: L'identifiant de la room concernée.
+        """
+        self.conv_box.clear_widgets()
+        self.conv_box.add_widget(ConversationContainer(room_id))
         self.conv_box.add_widget(InputsContainer())
 
     def set_channels_list(self):

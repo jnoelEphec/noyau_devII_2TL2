@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
+    [BASE]
     Ce fichier contient la classe Login permettant la gestion de la connexion utilisateur.
     ----- CODE DE LA CLASSE A IMPLEMENTER -----
 """

@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+#:import config src.config.config
+
+<Header@BoxLayout>
+    orientation: "horizontal"
+    size_hint: (1, .05)
+    pos_hint: {'x': 0, 'y': 0.95}
+
+    canvas:
+        Color:
+            rgba: 0, 0, 0, .5
+        Rectangle:
+            pos: self.pos
+            size: self.width, self.height
+
+    FloatLayout:
+        Label:
+            pos_hint: {'center_x': .05, 'center_y': .5}
+            text: "EpheCom"
+            font_size: 25
+
+        BoxLayout:
+            size_hint: (.15, 1)
+            pos_hint: {'center_x': .90, 'center_y': .1}
+
+            ClickableLink:
+                canvas.before:
+                    Rectangle:
+                        size: (30, 30)
+                        pos: (self.x + 30, self.y + 30)
+                        source: config.IMG_DIR + '/file-user-line.png'
+
+                on_press: root.parent.redirect_to_href("profile")
+
+            ClickableLink:
+                canvas.before:
+                    Rectangle:
+                        size: (30, 30)
+                        pos: (self.x + 30, self.y + 30)
+                        source: config.IMG_DIR + '/login-box-line.png'
+
+                on_press: root.parent.redirect_to_href("login")
+
+            ClickableLink:
+                canvas.before:
+                    Rectangle:
+                        size: (30, 30)
+                        pos: (self.x + 30, self.y + 30)
+                        source: config.IMG_DIR + '/questionnaire-line.png'
+
+                on_press: root.parent.redirect_to_href("help")

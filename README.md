@@ -4,10 +4,13 @@
   - Communications en temps réel
   - Enregistrement des données utiles en base de données (heure d'envoi, etc.)
   - Possibilité d'envoyer des documents, images, etc. dans une discussion
-
+  - ...
 
 - Système de discussions groupées
   - Possibilité d'inviter des membres dans un groupe
+  - Le créateur a un rôle de 'Gestionnaire' du groupe
+  - Les droits des utilisateurs peuvent être modifiés
+  - Le gestionnaire peut ajouter/supprimer des participants
   - ...
 
 
