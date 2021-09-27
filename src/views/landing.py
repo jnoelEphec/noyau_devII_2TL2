@@ -36,7 +36,7 @@ class LandingScreen(Screen):
 
     def redirect_to_href(self, href):
         """
-            ! A modifier vers le header !
+            Gestion des évènements de redirection du Screen.
         """
         self.sm.redirect(href)
 
