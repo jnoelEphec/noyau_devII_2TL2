@@ -12,7 +12,8 @@
     Version de Python : 3.9
     Système d'exploitation : Windows, OSX, Linux
     Type : Application de bureau
-    Langue utilisé pour coder : Anglais
+    Language utilisé pour coder : Anglais
+    Language utilisé pour documenter : Français
     Documentation Framework : https://kivy.org/doc/stable/api-kivy.html
     Source unique des icons : https://remixicon.com/
 
@@ -20,11 +21,18 @@
         https://www.python.org/dev/peps/pep-0008/
 
 """
+
 from kivy.app import App
 from kivy.lang import Builder
+from pymongo import MongoClient
 
 import src.config.config as config
+import pymongo as pymongo
+import os
 from src.models.screens_manager import ScreensManager
+from dotenv import load_dotenv
+
+load_dotenv()
 
 Builder.load_file("{0}/common.kv".format(config.VIEWS_DIR))
 
@@ -39,10 +47,11 @@ class Main(App):
         landing_screen = LandingScreen()
         sm.add_widget(landing_screen)
         sm.current = "landing"
-        landing_screen.set_channels_list()
+        landing_screen.set_teams_list()
         return sm
 
 
 if __name__ == '__main__':
     print("Bienvenue sur notre projet commun !")
+
     Main().run()

@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 #:import config src.config.config
 
+<MessageLabel@Label>
+    size_hint: (1, None)
+    text_size: self.size
+    valign: 'middle'
+    padding: 20, 0
+
+<MessageSent@MessageLabel>
+    halign: "left"
+
+<MessageReceived@MessageLabel>
+    halign: "right"
+
+
 <ConversationContainer@ScrollView>
     do_scroll_x: False
     do_scroll_y: True
     size_hint: (1, .95)
 
     GridLayout:
+        id: messages_container
         cols: 1
         spacing: 2
         size_hint_y: None
-
-        Label:
-            text: "JE SUIS l'UTILISATEUR ALIGNÉ A DROITE"
-            halign: "right"
-            text_size: self.size
-            valign: 'middle'
-            padding: 20, 0
-
-        Label:
-            text: "JE SUIS lE CORRESPONDANT ALIGNÉ A GAUCHE"
-            halign: "left"
-            text_size: self.size
-            valign: 'middle'
-            padding: 20, 0
 
 
 <MessageInput@TextInput>
@@ -33,11 +33,12 @@
 
 
 <SendMessageButton@Button>
+    id: send_btn
     size_hint: (.1, 1)
     font_size: 20
     text: "Envoyer"
     background_color: config.BG_COLOR_LEVEL_1
-    on_press: print("Il doit se passer quelque chose, à votre tour !")
+    on_press: self.parent.parent.send_message()
 
 
 <InputsContainer@BoxLayout>
@@ -45,5 +46,8 @@
     orientation: "horizontal"
 
     MessageInput:
+        id: message_input
 
     SendMessageButton:
+
+<Conversation@RelativeLayout>

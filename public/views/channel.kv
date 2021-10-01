@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+
+<GroupTitleRow@BoxLayout>
+    orientation: "horizontal"
+    size_hint_y: None
+    height: 75
+
+    canvas.before:
+        Color:
+            rgba: (1,1,1,0.25)
+        Line:
+            width: .5
+            rectangle: self.x, self.y, self.width, 0
+
+<GroupAddButton@Button>
+    canvas.before:
+        Rectangle:
+            size: (25, 25)
+            pos: (self.x, self.y + 5)
+            source: config.IMG_DIR + '/add-line.png'
+
+    size_hint: (.25, 1)
+    background_color: (0, 0, 0, 0)
+
+
+<GroupLabel@Label>
+    font_size: 16
+    size_hint: (.75, None)
+    height: 75
+    text_size: self.size
+    halign: 'left'
+    valign: 'bottom'
+    padding: (30, 10)
+
+<ChannelsListButton@Button>
+    size_hint_y: None
+    height: 30
+    font_size: 12
+    text_size: self.size
+    halign: 'left'
+    valign: 'middle'
+    padding: (50, 0)
+    background_color: (0, 0, 0, 0)
+
+<ChannelsContainer@ScrollView>
+    # Attention, ceci est du code brut, vous devez le dynamiser !
+
+    do_scroll_x: False
+    do_scroll_y: True
+
+    GridLayout:
+        id: channels_content
+        cols: 1
+        spacing: 2
+        size_hint_y: None

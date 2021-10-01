@@ -8,9 +8,10 @@
 
 
 class Channel:
-    def __init__(self, identifier, name, icon_path=None, participants=None):
+    def __init__(self, identifier, name, group, icon_path=None, participants=None):
         self.identifier = identifier
         self.name = name
+        self.group = group
         self.icon_path = icon_path
         self.participants = participants
 
