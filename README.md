@@ -53,33 +53,25 @@ Voici un tableau représentant les étapes et deadlines :
 
 Vous devrez maîtriser et utiliser les outils listés ci-dessous afin de vous organiser au mieux.
 - Git/Github - https://github.com/
+- [Github Project]
 - Pycharm (License éducative) - https://www.jetbrains.com/fr-fr/pycharm/
 - Python 3.8+ - https://www.python.org/downloads/
 - Environnements virtuels - https://docs.python.org/3/library/venv.html
-- Trello - https://trello.com/fr
 - [ Clockify ] - https://clockify.me/
 
 # Modules
 
 ## Système de discussion
 
-### L'utilisateur doit pouvoir communiquer par écrit avec une autre personne.
+### L'utilisateur doit pouvoir communiquer par écrit avec une ou plusieurs personnes.
 
-    - Les participants rejoignent une room de discussion.
-    - Maximum deux participants.
-    - Les discussions doivent être traçables.
-    - Les discussions doivent être en temps réel si les deux utilisateurs sont connectés en même temps.
-    - Les discussions doivent revenir au dernier état après reconnexion.
-    - [ Possibilité d'envoyer des documents, images, etc. dans une discussion ]
-
-## Système de discussion groupée
-
-### Plusieurs participants peuvent communiquer par écrit.
+    - Possibilité de discuter avec un seul membre (conversation privée)
     - Possibilité de créer une groupe de discussion.
     - Le créateur peut ajouter/supprimer des participants.
     - Les messages écrits doivent être traçables.
     - Les messages doivent être en temps réel si les deux utilisateurs ou plus sont connectés en même temps.
     - Les discussions doivent revenir au dernier état après reconnexion.
+    - [ Possibilité d'envoyer des documents, images, etc. dans une discussion ]
     
 ## Système de vidéo-conférence en temps réel
     - Possibilité de communiquer oralement et par vidéo avec un ou plusieurs participants.
