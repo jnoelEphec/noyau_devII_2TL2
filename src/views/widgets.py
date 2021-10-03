@@ -67,7 +67,7 @@ class ChannelsContainer(ScrollView):
                 group = BoxLayout(orientation="vertical", size_hint_y=None)
                 title_row = GroupTitleRow()
                 title_label = GroupLabel(text=group_name)
-                title_add_btn = GroupAddButton(on_press=lambda a: print("Je fais un truc"))
+                title_add_btn = GroupAddButton(on_press=lambda a: self.add_new_channel(group_name))
                 title_row.add_widget(title_label)
                 title_row.add_widget(title_add_btn)
                 group.add_widget(title_row)
@@ -79,6 +79,9 @@ class ChannelsContainer(ScrollView):
                                                   on_press=lambda a, _id=channel.identifier:
                                                   self.landing_screen.display_conversation(_id))
             groups[group_name].add_widget(channel_name_row)
+
+    def add_new_channel(self, group_name):
+        pass
 
 
 class MessageLabel(Label):

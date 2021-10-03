@@ -3,16 +3,16 @@
 
 <MessageLabel@Label>
     size_hint: (1, None)
-    text_size: self.size
+    text_size: root.width, None
+    size: self.texture_size
     valign: 'middle'
-    padding: 20, 0
+    padding: 20, 15
 
 <MessageSent@MessageLabel>
     halign: "left"
 
 <MessageReceived@MessageLabel>
     halign: "right"
-
 
 <ConversationContainer@ScrollView>
     do_scroll_x: False
@@ -28,7 +28,7 @@
 
 <MessageInput@TextInput>
     size_hint: (.7, 1)
-    font_size: 20
+    font_size: 15
     padding: 10, 10
 
 
