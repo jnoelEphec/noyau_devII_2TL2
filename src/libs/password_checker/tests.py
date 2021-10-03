@@ -1,5 +1,5 @@
 import unittest
-from src.libs.password_checker.checker import check_length
+from .checker import check_length
 
 
 class TestPasswordChecker(unittest.TestCase):

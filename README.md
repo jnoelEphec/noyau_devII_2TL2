@@ -111,6 +111,6 @@ Lors de votre implémentation, il vous est demandé de suivre à la lettre les b
 
 C'est-à-dire :
 - Votre code doit être documenté/commenté,
-- Vous suivez la PEP08,
+- Vous suivez la PEP08 !,
 - Vos noms de variables, fonction, classes etc. sont significatifs,
 - Vous travaillerez de manière agile, cela signifie que vous DEVEZ vous diviser les tâches de manière organisée, triées par priorités et grâce aux outils ci-dessus.
