@@ -5,16 +5,29 @@
     [BASE]
     Ce fichier représente une vue contenant la liste des "Team" disponible à l'utilisateur.
 """
-
+from kivy.lang import Builder
+from kivy.uix.button import Button
+from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManagerException
 from kivy.uix.scrollview import ScrollView
 
+from src.config import config
 from src.libs.sorting.dict_sort import dict_sort
 from src.models.channel import Channel
 from src.models.group import Group
 from src.models.screens_manager import ScreensManager
 from src.models.team import Team
-from src.views.widgets import TeamsListButton, EmptyTeams
+
+
+Builder.load_file("{0}/teams.kv".format(config.VIEWS_DIR))
+
+
+class TeamsListButton(Button):
+    pass
+
+
+class EmptyTeams(Label):
+    pass
 
 
 class TeamsContainer(ScrollView):

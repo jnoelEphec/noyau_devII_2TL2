@@ -17,13 +17,9 @@ from src.config import config
 from src.models.screens_manager import ScreensManager
 from src.views.conversation import Conversation
 from src.views.teams_container import TeamsContainer
-from src.views.widgets import ChannelsContainer
+from src.views.channels import ChannelsContainer
 
 Builder.load_file("{0}/header.kv".format(config.VIEWS_DIR))
-Builder.load_file("{0}/participants.kv".format(config.VIEWS_DIR))
-Builder.load_file("{0}/conversation.kv".format(config.VIEWS_DIR))
-Builder.load_file("{0}/channel.kv".format(config.VIEWS_DIR))
-Builder.load_file("{0}/teams.kv".format(config.VIEWS_DIR))
 Builder.load_file("{0}/landing.kv".format(config.VIEWS_DIR))
 
 
