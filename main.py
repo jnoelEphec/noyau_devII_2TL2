@@ -29,6 +29,8 @@ from pymongo import MongoClient
 import src.config.config as config
 import pymongo as pymongo
 import os
+
+from src.models.mongo_connector import MongoConnector
 from src.models.screens_manager import ScreensManager
 from dotenv import load_dotenv
 
@@ -51,7 +53,24 @@ class Main(App):
         return sm
 
 
+class Personne:
+    def __init__(self, nom):
+        self.nom = nom
+        
+        
+class Etudiant(Personne):
+    def __init__(self, nom):
+        super(Etudiant, self).__init__(nom)
+
+
 if __name__ == '__main__':
     print("Bienvenue sur notre projet commun !")
+
+    # try:
+    #     with MongoConnector() as connector:
+    #         collection = connector.db["users"]
+    #         res = collection.find_one()
+    #         print(res)
+    # except: pass
 
     Main().run()

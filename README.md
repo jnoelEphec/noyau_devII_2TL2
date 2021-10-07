@@ -14,6 +14,9 @@ Type : Application de bureau
 
 Langue utilisé pour coder : Anglais
 
+Base de données utlisée : MongoDB Atlas https://www.mongodb.com/fr-fr/cloud/atlas
+(Vous devrez demander votre certificat d'authentification temporaire à votre professeur)
+
 Documentation Framework : https://kivy.org/doc/stable/api-kivy.html
 
 Source unique des icons : https://remixicon.com/
@@ -41,12 +44,12 @@ Voici un tableau représentant les étapes et deadlines :
 
 | Tâche | Description | Deadline
 |---|---|---
-| Description du MVP | Vous devez décrire, en quelques lignes, ce a quoi ressemblera votre module dans une version minimaliste | [ S3 ] 
-| Cahier des charges | Vous définirez un cahier des charges complet de votre module. | [ S4 ]
-| Diagrammes et schémas d'architecture | Mise en place du diagramme UML et du schéma d'architecture en fonction de la description de votre module dans votre cahier des charges. Cela implique ce celui-ci soit le plus complet possible. | [ S5 ]
-| Implémentation du MVP | C'est qu'à cette étape que les premières lignes de code sont implémentées. Nous devons comprendre via un projet minimaliste le but de votre module. Cela doit se faire en ligne de commandes. | [ S7 ]
-| Implémentaiton complète | Toutes les fonctionnalités décrites dans votre cahier des charges seront implémentées | [ S8 - Sx ]
-| Validation | Vous démontrez, via des tests unitaires ou tout autre tests, la fiabilité de votre code. | [ S9 ]
+| Description du MVP | Vous devez décrire, en quelques lignes, ce a quoi ressemblera votre module dans une version minimaliste | [ S5 ] 
+| Cahier des charges | Vous définirez un cahier des charges complet de votre module. | [ S6 ]
+| Diagrammes et schémas d'architecture | Mise en place du diagramme UML et du schéma d'architecture en fonction de la description de votre module dans votre cahier des charges. Cela implique ce celui-ci soit le plus complet possible. | [ S7 ]
+| Implémentation du MVP | C'est qu'à cette étape que les premières lignes de code sont implémentées. Nous devons comprendre via un projet minimaliste le but de votre module. Cela doit se faire en ligne de commandes. | [ S9 ]
+| Implémentaiton complète | Toutes les fonctionnalités décrites dans votre cahier des charges seront implémentées | [ S10 - Sx ]
+| Validation | Vous démontrez, via des tests unitaires ou tout autre tests, la fiabilité de votre code. | [ S11 ]
 | Finalisation | Le module doit être inclu dans le projet noyau | [ S10 - Sx]
 
 # Outils
@@ -94,10 +97,18 @@ Vous devrez maîtriser et utiliser les outils listés ci-dessous afin de vous or
     - Interface d'administration pour les administrateurs du logiciel.
 
 
-## Bot
+## Bot permettant l'accès à diverses nouvelles (Météo, news, etc.)
     - Messages automatisés pour un channel grâce à des commandes spécifiques.
+    - Automatiser les informations en liant le bot à des news qui sont régulièrement affichées dans les groupes concernés.
+
+
+## Bot aidant dans la gestion de EpheCom
+    - Statut du réseau
+    - Statistiques sur différents critères comme : Nombre d'utilisateurs, de groupes etc.
+    - Graphiques représentant l'évolution des inscriptions, quantités d'inscrits, quantité de messages envoyés, etc.
+    - Ajout/Suppression de rôles.
+    - Ajout de team, groupes et channels de manière automatisée.
     - Ajout automatique dans des groupes grâce à des commandes spécifiques.
-    - [ Lier le bot à des news informatiques qui sont régulièrement affichées dans les groupes concernés. ]
 
 # Challenges
 
