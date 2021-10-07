@@ -14,6 +14,9 @@ Type : Application de bureau
 
 Langue utilisé pour coder : Anglais
 
+Base de données utlisée : MongoDB Atlas https://www.mongodb.com/fr-fr/cloud/atlas
+(Vous devrez demander votre certificat d'authentification temporaire à votre professeur)
+
 Documentation Framework : https://kivy.org/doc/stable/api-kivy.html
 
 Source unique des icons : https://remixicon.com/
