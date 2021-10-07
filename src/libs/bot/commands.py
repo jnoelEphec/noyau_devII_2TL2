@@ -41,6 +41,10 @@ def help():
 
 
 def display_all_ask_names():
+    """
+        Retourne l'ensemble des commandes que le bot accepte.
+        :return: list : la liste des commandes documentées par leurs docstring.
+    """
     forbidden_names = ["isfunction", "getmembers"]
 
     current_module = sys.modules[__name__]
