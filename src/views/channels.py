@@ -77,6 +77,10 @@ class ChannelsContainer(ScrollView):
             groups[group_name].add_widget(channel_name_row)
 
     def add_new_channel(self, group_name):
+        """
+        Cette méthode permet d'ajouter un nouveau channel dans le groupe concerné.
+        :param group_name: Représente le nom du groupe concerné.
+        """
         content = RelativeLayout()
 
         content.add_widget(Label(text="Le nom du nouveau channel et d'autres éléments"))
