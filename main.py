@@ -66,11 +66,4 @@ class Etudiant(Personne):
 if __name__ == '__main__':
     print("Bienvenue sur notre projet commun !")
 
-    # try:
-    #     with MongoConnector() as connector:
-    #         collection = connector.db["users"]
-    #         res = collection.find_one()
-    #         print(res)
-    # except: pass
-
     Main().run()

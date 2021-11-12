@@ -12,7 +12,9 @@ Système d'exploitation : Windows, OSX, Linux
 
 Type : Application de bureau
 
-Langue utilisé pour coder : Anglais
+Langue utilisée pour coder : Anglais
+
+Langue utilisée pour documenter : Français 
 
 Base de données utlisée : MongoDB Atlas https://www.mongodb.com/fr-fr/cloud/atlas
 (Vous devrez demander votre certificat d'authentification temporaire à votre professeur)
@@ -46,8 +48,8 @@ Voici un tableau représentant les étapes et deadlines :
 |---|---|---
 | Description du MVP | Vous devez décrire, en quelques lignes, ce a quoi ressemblera votre module dans une version minimaliste | [ S5 ] 
 | Cahier des charges | Vous définirez un cahier des charges complet de votre module. | [ S6 ]
-| Diagrammes et schémas d'architecture | Mise en place du diagramme UML et du schéma d'architecture en fonction de la description de votre module dans votre cahier des charges. Cela implique ce celui-ci soit le plus complet possible. | [ S7 ]
-| Implémentation du MVP | C'est qu'à cette étape que les premières lignes de code sont implémentées. Nous devons comprendre via un projet minimaliste le but de votre module. Cela doit se faire en ligne de commandes. | [ S9 ]
+| Implémentation du MVP | C'est qu'à cette étape que les premières lignes de code sont implémentées. Nous devons comprendre via un projet minimaliste le but de votre module. Cela doit se faire en ligne de commandes. | [ S8 ]
+| Diagrammes et schémas d'architecture | Mise en place du diagramme UML et du schéma d'architecture en fonction de la description de votre module dans votre cahier des charges. Cela implique ce celui-ci soit le plus complet possible. | [ S9 ]
 | Implémentaiton complète | Toutes les fonctionnalités décrites dans votre cahier des charges seront implémentées | [ S10 - Sx ]
 | Validation | Vous démontrez, via des tests unitaires ou tout autre tests, la fiabilité de votre code. | [ S11 ]
 | Finalisation | Le module doit être inclu dans le projet noyau | [ S10 - Sx]
